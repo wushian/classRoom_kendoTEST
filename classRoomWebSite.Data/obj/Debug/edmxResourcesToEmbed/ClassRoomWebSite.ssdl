@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ClassRoomWebSiteModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ClassRoomWebSiteModelStoreContainer">
+    <EntitySet Name="calendar_detail" EntityType="ClassRoomWebSiteModel.Store.calendar_detail" p6:Type="Tables" Schema="dbo" Table="calendar_detail" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="cat1" EntityType="ClassRoomWebSiteModel.Store.cat1" p6:Type="Tables" Schema="dbo" Table="cat1" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="cat2" EntityType="ClassRoomWebSiteModel.Store.cat2" p6:Type="Tables" Schema="dbo" Table="cat2" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="courseIntro" EntityType="ClassRoomWebSiteModel.Store.courseIntro" p6:Type="Tables" Schema="dbo" Table="courseIntro" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="QuestionAnser" EntityType="ClassRoomWebSiteModel.Store.QuestionAnser" p6:Type="Tables" Schema="dbo" Table="QuestionAnser" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="student" EntityType="ClassRoomWebSiteModel.Store.student" p6:Type="Tables" Schema="dbo" Table="student" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="SystemUser" EntityType="ClassRoomWebSiteModel.Store.SystemUser" p6:Type="Tables" Schema="dbo" Table="SystemUser" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="TaiwanZipCode" EntityType="ClassRoomWebSiteModel.Store.TaiwanZipCode" p6:Type="Tables" Schema="dbo" Table="TaiwanZipCode" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="teacher" EntityType="ClassRoomWebSiteModel.Store.teacher" p6:Type="Tables" Schema="dbo" Table="teacher" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+  </EntityContainer>
+  <EntityType Name="calendar_detail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="subject" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="startDateTime" Type="datetime" />
+    <Property Name="endDateTime" Type="datetime" />
+    <Property Name="feeStaff" Type="int" />
+    <Property Name="feeNonStaff" Type="int" />
+    <Property Name="address" Type="varbinary" MaxLength="100" />
+    <Property Name="contact" Type="varchar" MaxLength="50" />
+    <Property Name="contactTel" Type="varchar" MaxLength="50" />
+    <Property Name="describe" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="cat1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="cat2">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="courseIntro">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="describe" Type="varchar" MaxLength="50" />
+    <Property Name="pic1" Type="varbinary" MaxLength="50" />
+    <Property Name="pic2" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="QuestionAnser">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="cat1" Type="int" />
+    <Property Name="cat2" Type="int" />
+    <Property Name="pic1" Type="varchar" MaxLength="50" />
+    <Property Name="pic2" Type="varchar" MaxLength="50" />
+    <Property Name="describe" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="birthDay" Type="datetime" />
+    <Property Name="gender" Type="varchar" MaxLength="50" />
+    <Property Name="createDate" Type="datetime" />
+    <Property Name="education" Type="varchar" MaxLength="50" />
+    <Property Name="address" Type="varchar" MaxLength="100" />
+    <Property Name="company" Type="varchar" MaxLength="50" />
+    <Property Name="telno" Type="varchar" MaxLength="50" />
+    <Property Name="cellno" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SystemUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Account" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Salt" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TaiwanZipCode">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Zip" Type="int" Nullable="false" />
+    <Property Name="CityName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Town" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Sequence" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="teacher">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="picFile" Type="varchar" MaxLength="100" />
+    <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="gender" Type="varchar" MaxLength="20" />
+    <Property Name="createDate" Type="datetime" Nullable="false" />
+    <Property Name="birthDay" Type="datetime" />
+    <Property Name="address" Type="varchar" MaxLength="100" />
+    <Property Name="officeAddress" Type="varchar" MaxLength="100" />
+    <Property Name="telPhone" Type="varchar" MaxLength="50" />
+    <Property Name="cellPhone" Type="varchar" MaxLength="50" />
+    <Property Name="job" Type="varchar" MaxLength="50" />
+    <Property Name="ability" Type="varchar" MaxLength="200" />
+    <Property Name="educational" Type="varchar" MaxLength="50" />
+  </EntityType>
+</Schema>

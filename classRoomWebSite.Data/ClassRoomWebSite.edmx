@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Edmx Version="2.0" xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <Designer>
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="True" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="ContextNamespace" Value="classRoomWebSite.Data" />
+        <DesignerProperty Name="EntityNamespace" Value="classRoomWebSite.Data" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <Diagrams>
+      <Diagram Name="Model1" />
+    </Diagrams>
+  </Designer>
+  <Runtime>
+    <StorageModels>
+      <Schema Namespace="ClassRoomWebSiteModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ClassRoomWebSiteModelStoreContainer">
+          <EntitySet Name="calendar_detail" EntityType="ClassRoomWebSiteModel.Store.calendar_detail" p6:Type="Tables" Schema="dbo" Table="calendar_detail" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="cat1" EntityType="ClassRoomWebSiteModel.Store.cat1" p6:Type="Tables" Schema="dbo" Table="cat1" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="cat2" EntityType="ClassRoomWebSiteModel.Store.cat2" p6:Type="Tables" Schema="dbo" Table="cat2" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="courseIntro" EntityType="ClassRoomWebSiteModel.Store.courseIntro" p6:Type="Tables" Schema="dbo" Table="courseIntro" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="QuestionAnser" EntityType="ClassRoomWebSiteModel.Store.QuestionAnser" p6:Type="Tables" Schema="dbo" Table="QuestionAnser" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="student" EntityType="ClassRoomWebSiteModel.Store.student" p6:Type="Tables" Schema="dbo" Table="student" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SystemUser" EntityType="ClassRoomWebSiteModel.Store.SystemUser" p6:Type="Tables" Schema="dbo" Table="SystemUser" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="TaiwanZipCode" EntityType="ClassRoomWebSiteModel.Store.TaiwanZipCode" p6:Type="Tables" Schema="dbo" Table="TaiwanZipCode" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="teacher" EntityType="ClassRoomWebSiteModel.Store.teacher" p6:Type="Tables" Schema="dbo" Table="teacher" xmlns:p6="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+        </EntityContainer>
+        <EntityType Name="calendar_detail">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="subject" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="startDateTime" Type="datetime" />
+          <Property Name="endDateTime" Type="datetime" />
+          <Property Name="feeStaff" Type="int" />
+          <Property Name="feeNonStaff" Type="int" />
+          <Property Name="address" Type="varbinary" MaxLength="100" />
+          <Property Name="contact" Type="varchar" MaxLength="50" />
+          <Property Name="contactTel" Type="varchar" MaxLength="50" />
+          <Property Name="describe" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="cat1">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="cat2">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="courseIntro">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="describe" Type="varchar" MaxLength="50" />
+          <Property Name="pic1" Type="varbinary" MaxLength="50" />
+          <Property Name="pic2" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="QuestionAnser">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="cat1" Type="int" />
+          <Property Name="cat2" Type="int" />
+          <Property Name="pic1" Type="varchar" MaxLength="50" />
+          <Property Name="pic2" Type="varchar" MaxLength="50" />
+          <Property Name="describe" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="birthDay" Type="datetime" />
+          <Property Name="gender" Type="varchar" MaxLength="50" />
+          <Property Name="createDate" Type="datetime" />
+          <Property Name="education" Type="varchar" MaxLength="50" />
+          <Property Name="address" Type="varchar" MaxLength="100" />
+          <Property Name="company" Type="varchar" MaxLength="50" />
+          <Property Name="telno" Type="varchar" MaxLength="50" />
+          <Property Name="cellno" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SystemUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Account" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Salt" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TaiwanZipCode">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Zip" Type="int" Nullable="false" />
+          <Property Name="CityName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Town" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Sequence" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="teacher">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="picFile" Type="varchar" MaxLength="100" />
+          <Property Name="name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="gender" Type="varchar" MaxLength="20" />
+          <Property Name="createDate" Type="datetime" Nullable="false" />
+          <Property Name="birthDay" Type="datetime" />
+          <Property Name="address" Type="varchar" MaxLength="100" />
+          <Property Name="officeAddress" Type="varchar" MaxLength="100" />
+          <Property Name="telPhone" Type="varchar" MaxLength="50" />
+          <Property Name="cellPhone" Type="varchar" MaxLength="50" />
+          <Property Name="job" Type="varchar" MaxLength="50" />
+          <Property Name="ability" Type="varchar" MaxLength="200" />
+          <Property Name="educational" Type="varchar" MaxLength="50" />
+        </EntityType>
+      </Schema>
+    </StorageModels>
+    <ConceptualModels>
+      <Schema Namespace="classRoomWebSite.Data" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="classRoomWebSiteDataContext">
+          <EntitySet Name="CalendarDetail" EntityType="classRoomWebSite.Data.CalendarDetail" />
+          <EntitySet Name="Cat1" EntityType="classRoomWebSite.Data.Cat1" />
+          <EntitySet Name="Cat2" EntityType="classRoomWebSite.Data.Cat2" />
+          <EntitySet Name="CourseIntro" EntityType="classRoomWebSite.Data.CourseIntro" />
+          <EntitySet Name="QuestionAnser" EntityType="classRoomWebSite.Data.QuestionAnser" />
+          <EntitySet Name="Student" EntityType="classRoomWebSite.Data.Student" />
+          <EntitySet Name="SystemUser" EntityType="classRoomWebSite.Data.SystemUser" />
+          <EntitySet Name="TaiwanZipCode" EntityType="classRoomWebSite.Data.TaiwanZipCode" />
+          <EntitySet Name="Teacher" EntityType="classRoomWebSite.Data.Teacher" />
+        </EntityContainer>
+        <EntityType Name="CalendarDetail">
+          <Key>
+            <PropertyRef Name="Identification" />
+          </Key>
+          <Property Name="Identification" Type="Guid" Nullable="false" p6:IsUnique="True" xmlns:p6="http://tempuri.org/Attribute" />
+          <Property Name="Subject" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="StartDateTime" Type="DateTime" />
+          <Property Name="EndDateTime" Type="DateTime" />
+          <Property Name="FeeStaff" Type="Int32" />
+          <Property Name="FeeNonStaff" Type="Int32" />
+          <Property Name="Address" Type="Binary" MaxLength="100" FixedLength="false" />
+          <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ContactTel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Describe" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Cat1">
+          <Key>
+            <PropertyRef Name="Identification" />
+          </Key>
+          <Property Name="Identification" Type="Int32" Nullable="false" p6:IsUnique="True" p7:StoreGeneratedPattern="Identity" xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p6="http://tempuri.org/Attribute" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Cat2">
+          <Key>
+            <PropertyRef Name="Identification" />
+          </Key>
+          <Property Name="Identification" Type="Int32" Nullable="false" p6:IsUnique="True" p7:StoreGeneratedPattern="Identity" xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p6="http://tempuri.org/Attribute" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CourseIntro">
+          <Key>
+            <PropertyRef Name="Identification" />
+          </Key>
+          <Property Name="Identification" Type="Guid" Nullable="false" p6:IsUnique="True" xmlns:p6="http://tempuri.org/Attribute" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Describe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Pic1" Type="Binary" MaxLength="50" FixedLength="false" />
+          <Property Name="Pic2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="QuestionAnser">
+          <Key>
+            <PropertyRef Name="Identification" />
+          </Key>
+          <Property Name="Identification" Type="Guid" Nullable="false" p6:IsUnique="True" xmlns:p6="http://tempuri.org/Attribute" />
+          <Property Name="Cat1" Type="Int32" />
+          <Property Name="Cat2" Type="Int32" />
+          <Property Name="Pic1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Pic2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Describe" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="Identification" />
+          </Key>
+          <Property Name="Identification" Type="Guid" Nullable="false" p6:IsUnique="True" xmlns:p6="http://tempuri.org/Attribute" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BirthDay" Type="DateTime" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="Education" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Company" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Cellno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SystemUser">
+          <Key>
+            <PropertyRef Name="Identification" />
+          </Key>
+          <Property Name="Identification" Type="Guid" Nullable="false" p6:IsUnique="True" xmlns:p6="http://tempuri.org/Attribute" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Account" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Salt" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="UpdateDate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TaiwanZipCode">
+          <Key>
+            <PropertyRef Name="Identification" />
+          </Key>
+          <Property Name="Identification" Type="Int32" Nullable="false" p6:IsUnique="True" p7:StoreGeneratedPattern="Identity" xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p6="http://tempuri.org/Attribute" />
+          <Property Name="Zip" Type="Int32" Nullable="false" />
+          <Property Name="CityName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Town" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sequence" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Teacher">
+          <Key>
+            <PropertyRef Name="Identification" />
+          </Key>
+          <Property Name="Identification" Type="Guid" Nullable="false" p6:IsUnique="True" xmlns:p6="http://tempuri.org/Attribute" />
+          <Property Name="PicFile" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="BirthDay" Type="DateTime" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="OfficeAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TelPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CellPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Job" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Ability" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Educational" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </ConceptualModels>
+    <Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping CdmEntityContainer="classRoomWebSiteDataContext" StorageEntityContainer="ClassRoomWebSiteModelStoreContainer">
+          <EntitySetMapping Name="CalendarDetail">
+            <EntityTypeMapping TypeName="classRoomWebSite.Data.CalendarDetail">
+              <MappingFragment StoreEntitySet="calendar_detail">
+                <ScalarProperty Name="Identification" ColumnName="id" />
+                <ScalarProperty Name="Subject" ColumnName="subject" />
+                <ScalarProperty Name="StartDateTime" ColumnName="startDateTime" />
+                <ScalarProperty Name="EndDateTime" ColumnName="endDateTime" />
+                <ScalarProperty Name="FeeStaff" ColumnName="feeStaff" />
+                <ScalarProperty Name="FeeNonStaff" ColumnName="feeNonStaff" />
+                <ScalarProperty Name="Address" ColumnName="address" />
+                <ScalarProperty Name="Contact" ColumnName="contact" />
+                <ScalarProperty Name="ContactTel" ColumnName="contactTel" />
+                <ScalarProperty Name="Describe" ColumnName="describe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cat1">
+            <EntityTypeMapping TypeName="classRoomWebSite.Data.Cat1">
+              <MappingFragment StoreEntitySet="cat1">
+                <ScalarProperty Name="Identification" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cat2">
+            <EntityTypeMapping TypeName="classRoomWebSite.Data.Cat2">
+              <MappingFragment StoreEntitySet="cat2">
+                <ScalarProperty Name="Identification" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CourseIntro">
+            <EntityTypeMapping TypeName="classRoomWebSite.Data.CourseIntro">
+              <MappingFragment StoreEntitySet="courseIntro">
+                <ScalarProperty Name="Identification" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="name" />
+                <ScalarProperty Name="Describe" ColumnName="describe" />
+                <ScalarProperty Name="Pic1" ColumnName="pic1" />
+                <ScalarProperty Name="Pic2" ColumnName="pic2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuestionAnser">
+            <EntityTypeMapping TypeName="classRoomWebSite.Data.QuestionAnser">
+              <MappingFragment StoreEntitySet="QuestionAnser">
+                <ScalarProperty Name="Identification" ColumnName="id" />
+                <ScalarProperty Name="Cat1" ColumnName="cat1" />
+                <ScalarProperty Name="Cat2" ColumnName="cat2" />
+                <ScalarProperty Name="Pic1" ColumnName="pic1" />
+                <ScalarProperty Name="Pic2" ColumnName="pic2" />
+                <ScalarProperty Name="Describe" ColumnName="describe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Student">
+            <EntityTypeMapping TypeName="classRoomWebSite.Data.Student">
+              <MappingFragment StoreEntitySet="student">
+                <ScalarProperty Name="Identification" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="name" />
+                <ScalarProperty Name="BirthDay" ColumnName="birthDay" />
+                <ScalarProperty Name="Gender" ColumnName="gender" />
+                <ScalarProperty Name="CreateDate" ColumnName="createDate" />
+                <ScalarProperty Name="Education" ColumnName="education" />
+                <ScalarProperty Name="Address" ColumnName="address" />
+                <ScalarProperty Name="Company" ColumnName="company" />
+                <ScalarProperty Name="Telno" ColumnName="telno" />
+                <ScalarProperty Name="Cellno" ColumnName="cellno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemUser">
+            <EntityTypeMapping TypeName="classRoomWebSite.Data.SystemUser">
+              <MappingFragment StoreEntitySet="SystemUser">
+                <ScalarProperty Name="Identification" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Salt" ColumnName="Salt" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaiwanZipCode">
+            <EntityTypeMapping TypeName="classRoomWebSite.Data.TaiwanZipCode">
+              <MappingFragment StoreEntitySet="TaiwanZipCode">
+                <ScalarProperty Name="Identification" ColumnName="ID" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="Town" ColumnName="Town" />
+                <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teacher">
+            <EntityTypeMapping TypeName="classRoomWebSite.Data.Teacher">
+              <MappingFragment StoreEntitySet="teacher">
+                <ScalarProperty Name="Identification" ColumnName="id" />
+                <ScalarProperty Name="PicFile" ColumnName="picFile" />
+                <ScalarProperty Name="Name" ColumnName="name" />
+                <ScalarProperty Name="Gender" ColumnName="gender" />
+                <ScalarProperty Name="CreateDate" ColumnName="createDate" />
+                <ScalarProperty Name="BirthDay" ColumnName="birthDay" />
+                <ScalarProperty Name="Address" ColumnName="address" />
+                <ScalarProperty Name="OfficeAddress" ColumnName="officeAddress" />
+                <ScalarProperty Name="TelPhone" ColumnName="telPhone" />
+                <ScalarProperty Name="CellPhone" ColumnName="cellPhone" />
+                <ScalarProperty Name="Job" ColumnName="job" />
+                <ScalarProperty Name="Ability" ColumnName="ability" />
+                <ScalarProperty Name="Educational" ColumnName="educational" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </Mappings>
+  </Runtime>
+</Edmx>

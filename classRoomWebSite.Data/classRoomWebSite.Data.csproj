@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00b36a5a-8ccd-49d7-b7f3-2a7f69ec4319}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>classRoomWebSite.Data</RootNamespace>
+    <AssemblyName>classRoomWebSite.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CodeSmith.Data">
+      <Private>False</Private>
+      <HintPath>R:\classRoom\Templates\CSharp\..\Common\v4.0\CodeSmith.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classRoomWebSiteDataContext.cs" />
+    <Compile Include="classRoomWebSiteDataContext.generated.cs">
+      <DependentUpon>classRoomWebSiteDataContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CalendarDetail.cs" />
+    <Compile Include="Entities\CalendarDetail.generated.cs">
+      <DependentUpon>CalendarDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Cat1.cs" />
+    <Compile Include="Entities\Cat1.generated.cs">
+      <DependentUpon>Cat1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Cat2.cs" />
+    <Compile Include="Entities\Cat2.generated.cs">
+      <DependentUpon>Cat2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\CourseIntro.cs" />
+    <Compile Include="Entities\CourseIntro.generated.cs">
+      <DependentUpon>CourseIntro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\QuestionAnser.cs" />
+    <Compile Include="Entities\QuestionAnser.generated.cs">
+      <DependentUpon>QuestionAnser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Student.cs" />
+    <Compile Include="Entities\Student.generated.cs">
+      <DependentUpon>Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\SystemUser.cs" />
+    <Compile Include="Entities\SystemUser.generated.cs">
+      <DependentUpon>SystemUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TaiwanZipCode.cs" />
+    <Compile Include="Entities\TaiwanZipCode.generated.cs">
+      <DependentUpon>TaiwanZipCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Teacher.cs" />
+    <Compile Include="Entities\Teacher.generated.cs">
+      <DependentUpon>Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\CalendarDetailExtensions.cs" />
+    <Compile Include="Queries\CalendarDetailExtensions.Generated.cs">
+      <DependentUpon>CalendarDetailExtensions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\Cat1Extensions.cs" />
+    <Compile Include="Queries\Cat1Extensions.Generated.cs">
+      <DependentUpon>Cat1Extensions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\Cat2Extensions.cs" />
+    <Compile Include="Queries\Cat2Extensions.Generated.cs">
+      <DependentUpon>Cat2Extensions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\CourseIntroExtensions.cs" />
+    <Compile Include="Queries\CourseIntroExtensions.Generated.cs">
+      <DependentUpon>CourseIntroExtensions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\QuestionAnserExtensions.cs" />
+    <Compile Include="Queries\QuestionAnserExtensions.Generated.cs">
+      <DependentUpon>QuestionAnserExtensions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\StudentExtensions.cs" />
+    <Compile Include="Queries\StudentExtensions.Generated.cs">
+      <DependentUpon>StudentExtensions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\SystemUserExtensions.cs" />
+    <Compile Include="Queries\SystemUserExtensions.Generated.cs">
+      <DependentUpon>SystemUserExtensions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\TaiwanZipCodeExtensions.cs" />
+    <Compile Include="Queries\TaiwanZipCodeExtensions.Generated.cs">
+      <DependentUpon>TaiwanZipCodeExtensions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\TeacherExtensions.cs" />
+    <Compile Include="Queries\TeacherExtensions.Generated.cs">
+      <DependentUpon>TeacherExtensions.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Generate Include="Entities.csp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="ClassRoomWebSite.edmx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\CodeSmith\CodeSmith.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,4 @@
+R:\classRoom\classRoomWebSite.Data\bin\Debug\classRoomWebSite.Data.dll
+R:\classRoom\classRoomWebSite.Data\bin\Debug\classRoomWebSite.Data.pdb
+R:\classRoom\classRoomWebSite.Data\obj\Debug\classRoomWebSite.Data.dll
+R:\classRoom\classRoomWebSite.Data\obj\Debug\classRoomWebSite.Data.pdb

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping CdmEntityContainer="classRoomWebSiteDataContext" StorageEntityContainer="ClassRoomWebSiteModelStoreContainer">
+    <EntitySetMapping Name="CalendarDetail">
+      <EntityTypeMapping TypeName="classRoomWebSite.Data.CalendarDetail">
+        <MappingFragment StoreEntitySet="calendar_detail">
+          <ScalarProperty Name="Identification" ColumnName="id" />
+          <ScalarProperty Name="Subject" ColumnName="subject" />
+          <ScalarProperty Name="StartDateTime" ColumnName="startDateTime" />
+          <ScalarProperty Name="EndDateTime" ColumnName="endDateTime" />
+          <ScalarProperty Name="FeeStaff" ColumnName="feeStaff" />
+          <ScalarProperty Name="FeeNonStaff" ColumnName="feeNonStaff" />
+          <ScalarProperty Name="Address" ColumnName="address" />
+          <ScalarProperty Name="Contact" ColumnName="contact" />
+          <ScalarProperty Name="ContactTel" ColumnName="contactTel" />
+          <ScalarProperty Name="Describe" ColumnName="describe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cat1">
+      <EntityTypeMapping TypeName="classRoomWebSite.Data.Cat1">
+        <MappingFragment StoreEntitySet="cat1">
+          <ScalarProperty Name="Identification" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cat2">
+      <EntityTypeMapping TypeName="classRoomWebSite.Data.Cat2">
+        <MappingFragment StoreEntitySet="cat2">
+          <ScalarProperty Name="Identification" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CourseIntro">
+      <EntityTypeMapping TypeName="classRoomWebSite.Data.CourseIntro">
+        <MappingFragment StoreEntitySet="courseIntro">
+          <ScalarProperty Name="Identification" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+          <ScalarProperty Name="Describe" ColumnName="describe" />
+          <ScalarProperty Name="Pic1" ColumnName="pic1" />
+          <ScalarProperty Name="Pic2" ColumnName="pic2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuestionAnser">
+      <EntityTypeMapping TypeName="classRoomWebSite.Data.QuestionAnser">
+        <MappingFragment StoreEntitySet="QuestionAnser">
+          <ScalarProperty Name="Identification" ColumnName="id" />
+          <ScalarProperty Name="Cat1" ColumnName="cat1" />
+          <ScalarProperty Name="Cat2" ColumnName="cat2" />
+          <ScalarProperty Name="Pic1" ColumnName="pic1" />
+          <ScalarProperty Name="Pic2" ColumnName="pic2" />
+          <ScalarProperty Name="Describe" ColumnName="describe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Student">
+      <EntityTypeMapping TypeName="classRoomWebSite.Data.Student">
+        <MappingFragment StoreEntitySet="student">
+          <ScalarProperty Name="Identification" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+          <ScalarProperty Name="BirthDay" ColumnName="birthDay" />
+          <ScalarProperty Name="Gender" ColumnName="gender" />
+          <ScalarProperty Name="CreateDate" ColumnName="createDate" />
+          <ScalarProperty Name="Education" ColumnName="education" />
+          <ScalarProperty Name="Address" ColumnName="address" />
+          <ScalarProperty Name="Company" ColumnName="company" />
+          <ScalarProperty Name="Telno" ColumnName="telno" />
+          <ScalarProperty Name="Cellno" ColumnName="cellno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemUser">
+      <EntityTypeMapping TypeName="classRoomWebSite.Data.SystemUser">
+        <MappingFragment StoreEntitySet="SystemUser">
+          <ScalarProperty Name="Identification" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Salt" ColumnName="Salt" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaiwanZipCode">
+      <EntityTypeMapping TypeName="classRoomWebSite.Data.TaiwanZipCode">
+        <MappingFragment StoreEntitySet="TaiwanZipCode">
+          <ScalarProperty Name="Identification" ColumnName="ID" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="Town" ColumnName="Town" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teacher">
+      <EntityTypeMapping TypeName="classRoomWebSite.Data.Teacher">
+        <MappingFragment StoreEntitySet="teacher">
+          <ScalarProperty Name="Identification" ColumnName="id" />
+          <ScalarProperty Name="PicFile" ColumnName="picFile" />
+          <ScalarProperty Name="Name" ColumnName="name" />
+          <ScalarProperty Name="Gender" ColumnName="gender" />
+          <ScalarProperty Name="CreateDate" ColumnName="createDate" />
+          <ScalarProperty Name="BirthDay" ColumnName="birthDay" />
+          <ScalarProperty Name="Address" ColumnName="address" />
+          <ScalarProperty Name="OfficeAddress" ColumnName="officeAddress" />
+          <ScalarProperty Name="TelPhone" ColumnName="telPhone" />
+          <ScalarProperty Name="CellPhone" ColumnName="cellPhone" />
+          <ScalarProperty Name="Job" ColumnName="job" />
+          <ScalarProperty Name="Ability" ColumnName="ability" />
+          <ScalarProperty Name="Educational" ColumnName="educational" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

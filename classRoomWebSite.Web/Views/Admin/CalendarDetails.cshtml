@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "CalendarDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2> Navigate to: 
+    <select onchange="window.location = this.value;">
+        <option value="/admin/CalendarDetails" selected="selected">CalendarDetails</option>
+        <option value="/admin/Cat1s">Cat1s</option>
+        <option value="/admin/Cat2s">Cat2s</option>
+        <option value="/admin/CourseIntros">CourseIntros</option>
+        <option value="/admin/QuestionAnsers">QuestionAnsers</option>
+        <option value="/admin/Students">Students</option>
+        <option value="/admin/SystemUsers">SystemUsers</option>
+        <option value="/admin/TaiwanZipCodes">TaiwanZipCodes</option>
+        <option value="/admin/Teachers">Teachers</option>
+    </select>
+</h2>
+<div id="grid"></div>
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/Generated/CalendarDetails.js")
+}

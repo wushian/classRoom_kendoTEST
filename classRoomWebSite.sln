@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "classRoomWebSite.Data", "R:\classRoom\classRoomWebSite.Data\classRoomWebSite.Data.csproj", "{00B36A5A-8CCD-49D7-B7F3-2A7F69EC4319}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "classRoomWebSite.Web", "R:\classRoom\classRoomWebSite.Web\classRoomWebSite.Web.csproj", "{102E2535-1FED-412C-B341-1A8F2242AAE6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00B36A5A-8CCD-49D7-B7F3-2A7F69EC4319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00B36A5A-8CCD-49D7-B7F3-2A7F69EC4319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00B36A5A-8CCD-49D7-B7F3-2A7F69EC4319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00B36A5A-8CCD-49D7-B7F3-2A7F69EC4319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{102E2535-1FED-412C-B341-1A8F2242AAE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{102E2535-1FED-412C-B341-1A8F2242AAE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{102E2535-1FED-412C-B341-1A8F2242AAE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{102E2535-1FED-412C-B341-1A8F2242AAE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

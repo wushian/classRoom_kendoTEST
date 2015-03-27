@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="classRoomWebSite.Data" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="classRoomWebSiteDataContext">
+    <EntitySet Name="CalendarDetail" EntityType="classRoomWebSite.Data.CalendarDetail" />
+    <EntitySet Name="Cat1" EntityType="classRoomWebSite.Data.Cat1" />
+    <EntitySet Name="Cat2" EntityType="classRoomWebSite.Data.Cat2" />
+    <EntitySet Name="CourseIntro" EntityType="classRoomWebSite.Data.CourseIntro" />
+    <EntitySet Name="QuestionAnser" EntityType="classRoomWebSite.Data.QuestionAnser" />
+    <EntitySet Name="Student" EntityType="classRoomWebSite.Data.Student" />
+    <EntitySet Name="SystemUser" EntityType="classRoomWebSite.Data.SystemUser" />
+    <EntitySet Name="TaiwanZipCode" EntityType="classRoomWebSite.Data.TaiwanZipCode" />
+    <EntitySet Name="Teacher" EntityType="classRoomWebSite.Data.Teacher" />
+  </EntityContainer>
+  <EntityType Name="CalendarDetail">
+    <Key>
+      <PropertyRef Name="Identification" />
+    </Key>
+    <Property Name="Identification" Type="Guid" Nullable="false" p6:IsUnique="True" xmlns:p6="http://tempuri.org/Attribute" />
+    <Property Name="Subject" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StartDateTime" Type="DateTime" />
+    <Property Name="EndDateTime" Type="DateTime" />
+    <Property Name="FeeStaff" Type="Int32" />
+    <Property Name="FeeNonStaff" Type="Int32" />
+    <Property Name="Address" Type="Binary" MaxLength="100" FixedLength="false" />
+    <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContactTel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Describe" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Cat1">
+    <Key>
+      <PropertyRef Name="Identification" />
+    </Key>
+    <Property Name="Identification" Type="Int32" Nullable="false" p6:IsUnique="True" p7:StoreGeneratedPattern="Identity" xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p6="http://tempuri.org/Attribute" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Cat2">
+    <Key>
+      <PropertyRef Name="Identification" />
+    </Key>
+    <Property Name="Identification" Type="Int32" Nullable="false" p6:IsUnique="True" p7:StoreGeneratedPattern="Identity" xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p6="http://tempuri.org/Attribute" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CourseIntro">
+    <Key>
+      <PropertyRef Name="Identification" />
+    </Key>
+    <Property Name="Identification" Type="Guid" Nullable="false" p6:IsUnique="True" xmlns:p6="http://tempuri.org/Attribute" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Describe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Pic1" Type="Binary" MaxLength="50" FixedLength="false" />
+    <Property Name="Pic2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="QuestionAnser">
+    <Key>
+      <PropertyRef Name="Identification" />
+    </Key>
+    <Property Name="Identification" Type="Guid" Nullable="false" p6:IsUnique="True" xmlns:p6="http://tempuri.org/Attribute" />
+    <Property Name="Cat1" Type="Int32" />
+    <Property Name="Cat2" Type="Int32" />
+    <Property Name="Pic1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Pic2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Describe" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Identification" />
+    </Key>
+    <Property Name="Identification" Type="Guid" Nullable="false" p6:IsUnique="True" xmlns:p6="http://tempuri.org/Attribute" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BirthDay" Type="DateTime" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" />
+    <Property Name="Education" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Company" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Telno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cellno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SystemUser">
+    <Key>
+      <PropertyRef Name="Identification" />
+    </Key>
+    <Property Name="Identification" Type="Guid" Nullable="false" p6:IsUnique="True" xmlns:p6="http://tempuri.org/Attribute" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Account" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Salt" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+    <Property Name="UpdateDate" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TaiwanZipCode">
+    <Key>
+      <PropertyRef Name="Identification" />
+    </Key>
+    <Property Name="Identification" Type="Int32" Nullable="false" p6:IsUnique="True" p7:StoreGeneratedPattern="Identity" xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p6="http://tempuri.org/Attribute" />
+    <Property Name="Zip" Type="Int32" Nullable="false" />
+    <Property Name="CityName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Town" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Sequence" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="Identification" />
+    </Key>
+    <Property Name="Identification" Type="Guid" Nullable="false" p6:IsUnique="True" xmlns:p6="http://tempuri.org/Attribute" />
+    <Property Name="PicFile" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+    <Property Name="BirthDay" Type="DateTime" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OfficeAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TelPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CellPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Job" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ability" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Educational" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

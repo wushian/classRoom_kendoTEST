@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
+  <variables>
+    <add key="ClassRoomWebSiteConnectionString" value="Data Source=172.17.1.6;Initial Catalog=classRoomWebSite;Persist Security Info=True;User ID=sa;Password=new_2012" />
+  </variables>
+  <defaultProperties>
+    <property name="EdmxFile">ClassRoomWebSite.edmx</property>
+  </defaultProperties>
+  <propertySets>
+    <propertySet name="EDMX" template="..\Templates\CSharp\edmx.cst">
+      <property name="IncludeViews">False</property>
+      <property name="IncludeFunctions">False</property>
+      <property name="IgnoreList">
+        <stringList>
+          <string>^dbo.sysdiagrams$</string>
+          <string>^dbo.sp_</string>
+          <string>^dbo.aspnet</string>
+        </stringList>
+      </property>
+      <property name="IncludeList">
+        <sringList>
+          <string></string>
+        </sringList>
+      </property>
+      <property name="CleanExpression">
+        <stringList>
+          <string>^(sp|tbl|udf|vw)_</string>
+        </stringList>
+      </property>
+      <property name="SourceDatabase">
+        <connectionString>$(ClassRoomWebSiteConnectionString)</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+      </property>
+      <property name="EntityNamespace">classRoomWebSite.Data</property>
+      <property name="ContextNamespace">classRoomWebSite.Data</property>
+      <property name="DataContextName">classRoomWebSiteDataContext</property>
+    </propertySet>
+    <propertySet name="Entities" template="..\Templates\CSharp\Entities.cst">
+      <property name="BaseDirectory">.\</property>
+      <property name="OutputDirectory">.\Entities</property>
+    </propertySet>
+    <propertySet name="Queries" template="..\Templates\CSharp\Queries.cst">
+      <property name="QueryDirectory">.\Queries</property>
+      <property name="MethodPrefix">By</property>
+      <property name="UniqueMethodPrefix">GetBy</property>
+      <property name="MethodKeySuffix">Key</property>
+    </propertySet>
+  </propertySets>
+</codeSmith>
